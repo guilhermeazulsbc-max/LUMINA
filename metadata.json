@@ -1,8 +1,9 @@
 
 {
-  "description": "Lumina - Uma plataforma de inteligência multimodal para trabalho e criatividade. Converta PDFs em PowerPoints, gere guias passo a passo e explore o poder do Gemini 3 Pro.",
   "requestFramePermissions": [
-    "microphone"
-  ],
-  "name": "Lumina Work Studio"
+    "microphone",
+    "camera",
+    "geolocation",
+    "display-capture"
+  ]
 }

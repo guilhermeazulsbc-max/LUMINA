@@ -2,8 +2,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lumina | Work Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +15,15 @@
             color: #1e293b;
             margin: 0;
             overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
         }
         .soft-glass {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(226, 232, 240, 0.8);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
         .alive-bg {
-            background: linear-gradient(-45deg, #e0e7ff, #fdf2f8, #f0f9ff, #ffffff);
+            background: linear-gradient(-45deg, #f1f5f9, #eff6ff, #f8fafc, #ffffff);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
         }
@@ -41,9 +42,14 @@
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: .8; transform: scale(1.05); }
         }
-        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        
+        /* Previne zoom em inputs no iOS */
+        input[type="text"], textarea {
+            font-size: 16px !important;
+        }
     </style>
 <script type="importmap">
 {
